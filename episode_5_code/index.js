@@ -18,7 +18,7 @@ fs.readdir('./commands/', (err, files) => {
 
   jsfile.forEach((f, i) => {
     let props = require(`./commands/${f}`);
-    if (!props.help || !props.help.name || !props.help.run) {
+    if (!props.help || !props.help.name || !props.run) {
       return console.log(`${f} is not in the correct format!`);
     }
     console.log(`${f} loaded!`);
